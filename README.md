@@ -1,2 +1,2 @@
-# genius-appli-JS
-retrouver le nom d'une musique à partir des paroles en utilisant l'API de genius 
+# m4103c-projet-js-2020-2021
+Base de code de départ pour le projet JS "Développement d'une interface pour API publique"

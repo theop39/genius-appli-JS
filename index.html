@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr">
+	<head>
+		<title>M4103C-Projet-JS - Recherche d'offres d'emploi</title>
+		<meta charset="utf-8">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon-js.ico">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body onload=init();>
+		<header>
+			<img id="main-logo" src="images/genius.png">
+			<h1>Recherche de paroles</h1>
+		
+			<p id="explication">Cette page permet de rechercher des paroles via l'API publique de <a href="https://genius.com/" target="_blank">genius.com</a>.<br>
+			Saisir les paroles d'une chanson pour rechercher les chansons contenant ces paroles et enregistrer vos recherches favorites pour les retrouver facilement.</p>
+		</header>
+		<hr>
+
+		<main id="conteneur">
+			<!-- Section de recherche (avec résultats) -->
+			<section id="section-recherche">
+				<div id="bloc-recherche">
+					<!-- Champ de recherche -->
+					<input id="recherche" type="text" placeholder="Que cherchez-vous ?" />
+
+					<!-- Boutons -->
+					<button id="btn-lancer-recherche" type="button"
+					class="btn_clicable" title="Lancer la recherche">
+						<!-- Icone provenant de flaticon.com -->
+						<img src="images/loupe.svg" alt="Loupe pour recherche" width=22 >
+					</button>
+
+					<button id="btn-favoris" type="button" disabled
+					title="Ajouter la recherche aux favoris">
+						<!-- Icone étoile vide => Recherche pas en favoris -->
+						<img src="images/etoile-vide.svg" id="etoile" alt="Etoile vide" width=22 >
+
+						<!-- Icone étoile pleine => Recherche en favoris -->
+						<!-- <img src="images/etoile-pleine.svg" alt="Etoile pleine" width=22 > -->
+
+						<!-- (Icones provenant de flaticon.com) -->
+					</button>
+				</div>
+
+				<!-- Résultats de recherche -->
+				<div id="bloc-gif-attente">
+					<img src='images/attente-ajax.gif' alt="GIF Attente de résultats" width=50 />
+				</div>
+				<div id="bloc-resultats">
+					
+					
+				</div>
+			</section>
+
+			<!-- Section de séparation (avec la bordure verte) -->
+			<section id="section-separation"></section>
+
+			<!-- Section des recherches favorites -->
+			<section id="section-favoris">
+				<h2>Recherches favorites</h2>
+				<p>Cliquer sur une recherche favorite ci-dessus pour relancer celle-ci :</p>
+				<ul id="liste-favoris">
+					
+				</ul>
+				
+			</section>
+
+		</main>
+		
+		<script
+				src="https://code.jquery.com/jquery-3.6.0.js"
+				integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+				crossorigin="anonymous"></script>
+    	
+		<script src="geniusAPI.js"></script>
+	</body>
+</html>
+
