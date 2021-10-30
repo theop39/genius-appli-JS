@@ -45,6 +45,7 @@ function afficherResultat(res) {
 
 function ajax_get_request(callback, url, async) {
     var xhr = new XMLHttpRequest(); // Création de l'objet
+    var proxy = 'https://cors-anywhere.herokuapp.com/';
        // Définition de la fonction à exécuter à chaque changement d'état
     xhr.onreadystatechange = function(){
     if (callback && xhr.readyState == XMLHttpRequest.DONE
@@ -54,7 +55,7 @@ function ajax_get_request(callback, url, async) {
     // => On appelle la fonction callback en lui passant la réponse 
     callback(xhr.responseText);
     } };
-    xhr.open("GET", url, async); // Initialisation de l'objet
+    xhr.open("GET", proxy + url, async); // Initialisation de l'objet
     xhr.setRequestHeader('Authorization', 'Bearer 7eoDZy400nLQe8jiqvekYbwGdwAjp21Fl2kGWU3V2ACskoBGZLtM7G7_csryBqJ2');
     xhr.send(); // Envoi de la requête 
 
