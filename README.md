@@ -1,2 +1,1 @@
-# m4103c-projet-js-2020-2021
-Base de code de départ pour le projet JS "Développement d'une interface pour API publique"
+Pour que l'application fonctionne il faut se rendre à l'url 'https://cors-anywhere.herokuapp.com/ et activer le mode demo.
